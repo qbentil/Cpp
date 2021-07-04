@@ -1,2 +1,2 @@
-# cpp-login-system
-C++ Console Application for Simple Login.
+# CPP
+This repo contains all my C++ projects
