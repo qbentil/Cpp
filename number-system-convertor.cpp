@@ -1,3 +1,5 @@
+// Themanbentil made it💖
+
 #include <iostream>
 #include <cmath>
 using namespace std;
@@ -50,9 +52,56 @@ void fromBinary()
     cout << "Octal: " << binToOct(binaryNumber) << endl;
     cout << "Hexadecimal: " << binToHex(binaryNumber) << endl;
 }
+
+void fromDecimal() 
+{
+    int decimalNumber;
+    cout << "Enter Decimal Number: ";
+    cin >> decimalNumber;
+    // Output calculateed figures
+    cout << "Binary: " << convert(decimalNumber, 10, 2) << endl;
+    cout << "Octal: " << convert(decimalNumber, 10, 8) << endl;
+    cout << "Hexadecimal: " << decToHex(decimalNumber) << endl;
+}
+
+void menu()
+{
+    cout << "Program menu: " << endl;
+    cout << "0 - To Quit" << endl;
+    cout << "1 - Convert from Decimal" << endl;
+    cout << "2 - Convert from Binary" << endl;
+    cout << "3 - Program menu: " << endl;
+}
 int main()
 {
     
-    fromBinary();
+    bool quit = false;
+    int opt;
+    
+    // print menu
+    menu();
+    while (!quit)
+    {
+        cout << "Enter option: ";
+        cin >> opt;
+        switch (opt){
+            case 0:
+                cout <<"Quiting program.......";
+                quit = true;
+                break;
+            case 1:
+                fromDecimal();
+                break;
+            case 2:
+                fromBinary();
+                break;
+            case 3:
+                menu();
+                break;
+            default:
+                cout <<"Action not found!";
+                break;
+        }
+    }
     return 0;
 }
