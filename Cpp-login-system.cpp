@@ -21,6 +21,7 @@ bool IsLoggedIn()
 
     ifstream read(path+  username + ".txt"); // read user data from userfiles;
 
+//     Reading users data from created file into respective variables
     getline(read, un);
     getline(read, pw);
     getline(read, fname);
@@ -53,6 +54,8 @@ void Register()
 {
         string fname, lname, gender, email, dob, nationality, username, password;
         int age;
+
+//         Display User info 
         string path = "C:\\Users/User/Documents/codeblocksProjects/login_system/users/";
         cout << "Your First Name: "; cin >> fname;
         cout << "Your Last Name: "; cin >> lname;
