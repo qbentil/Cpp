@@ -1,12 +1,43 @@
 // Themanbentil Made it💻🥰
 // </I Code>
 
-#include <iostream>  
+#include <iostream> 
+#include <fstream>
 #include <string>  
 
 using namespace std;  
 
+// void print_menu()
+// {
+//     cout << "Welcome to Bentil's Grocerry store!." << endl;
+//     cout << "=========PROGRAM MENU========" << endl;
+//     cout << "0 - Quit Progam" << endl;
+//     cout << "1 - Add New Product" << endl;
+//     cout << "2 - View Products in Store" << endl;
+//     cout << "3 - View Product Details" << endl;
+//     cout << "=========PROGRAM MENU========" << endl;
+// }
+// void produc_detail(id)
+// {
+//     cout << "=========ITEM DETAILS========" << endl;
+//     cout << "Product Code: 123"  << endl;
+//     cout << "Product name: "<< item_name << endl;
+//     cout << "Duration on Shelf: " << duration << endl;
+//     cout << "Percentage Increase: 2%" << endl;
+//     cout << "Selling price: "<< actual_price + (actual_price * percent_inc)  << endl;
+//     cout << "=========ITEM DETAILS========" << endl;
+// }
+void addProduct(int id, string name, double price)
+{
+    ofstream file;
+    file.open("c:/products.txt"); // Creating Files with Username
+    //Writing User Data in File
+    file << "ID     NAME    PRICE   " << endl;
+    file << id << "     " << name << "     " << price << endl;
+    file.close();
 
+    cout << "\n\n Product Added successfully!.\n\n";
+}
 int main()  
 {  
     string item_name;
@@ -19,15 +50,8 @@ int main()
     cout << "Enter item Price:  "; cin >> actual_price;
     cout << "Enter item duration on shelf(Days): "; cin >> duration;
     
-    cout << item_name << " added successfully." << endl;
+    addProduct(2, item_name, actual_price);
     
-    cout << "=========ITEM DETAILS========" << endl;
-    cout << "\nProduct Code: 123"  << endl;
-    cout << "Product name: "<< item_name << endl;
-    cout << "Duration on Shelf: " << duration << endl;
-    cout << "Percentage Increase: 2%" << endl;
-    cout << "Selling price: "<< actual_price + (actual_price * percent_inc)  << endl;
-    cout << "\n=========ITEM DETAILS========" << endl;
     
     return 0;  
 }  
