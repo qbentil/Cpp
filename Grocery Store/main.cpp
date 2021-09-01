@@ -30,7 +30,7 @@ using namespace std;
 void addProduct(int id, string name, double price)
 {
     ofstream file;
-    file.open("c:/products.txt"); // Creating Files with Username
+    file.open(PATH-TO-FILE); // Creating Files with Username
     //Writing User Data in File
     file << "ID     NAME    PRICE   " << endl;
     file << id << "     " << name << "     " << price << endl;
