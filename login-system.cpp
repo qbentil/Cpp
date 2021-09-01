@@ -13,7 +13,7 @@ string toLowerCase(string str){
 bool IsLoggedIn()
 {
     //string username, password, un, pw;
-    string un, pw, fname, lname, gender, email, dob, nationality, username, password, age;
+    string un, pw, name, gender, email, dob, nationality, username, password, age;
     //int age;
     string path = "C:\\Users/User/Documents/codeblocksProjects/login_system/users/";
     cout << "Enter username: "; cin >> username;
@@ -24,8 +24,7 @@ bool IsLoggedIn()
 //     Reading users data from created file into respective variables
     getline(read, un);
     getline(read, pw);
-    getline(read, fname);
-    getline(read, lname);
+    getline(read, name);
     getline(read, gender);
     getline(read, email);
     getline(read, nationality);
@@ -37,8 +36,7 @@ bool IsLoggedIn()
     {
         cout << "\nWelcome to you dashboard, " << un << endl;
         cout << "\nYour Personal Detils are: \n" << endl;
-        cout << "Your First Name: " << fname << endl;
-        cout << "Your Last Name: "<< lname << endl;
+        cout << "Your Name: "<< name << endl;
         cout << "Your Username: " << username<< endl;
         cout << "Your Password: *******" << endl;
         cout << "Your Gender: " << gender<< endl;
@@ -52,13 +50,12 @@ bool IsLoggedIn()
 }
 void Register()
 {
-        string fname, lname, gender, email, dob, nationality, username, password;
+        string name, gender, email, dob, nationality, username, password;
         int age;
 
 //         Display User info 
         string path = "C:\\Users/User/Documents/codeblocksProjects/login_system/users/";
-        cout << "Your First Name: "; cin >> fname;
-        cout << "Your Last Name: "; cin >> lname;
+        cout << "Your Name: "; getline(cin, name);
         cout << "Your Username: "; cin >> username;
         cout << "Your Password:"; cin >> password;
         cout << "Your Gender: "; cin >> gender;
@@ -76,8 +73,7 @@ void Register()
 
                 //Writing User Data in File
                 file << username << endl << password << endl;
-                file << fname << endl;
-                file << lname << endl;
+                file << name << endl;
                 file << gender << endl;
                 file << email << endl;
                 file << nationality << endl;
