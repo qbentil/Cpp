@@ -158,20 +158,8 @@ void from_pound(double amount, int to)
 
 int main()
 {
-
-    // number 2
-    string name, nationalID_number, phone;
     int currency, exchange_format;
     double amount;
-
-    cout << "Enter your name: ";
-    getline(cin, name);
-
-    cout << "Enter your Phone number: ";
-    cin >>  phone;
-
-    cout << "Enter your National ID number: ";
-    cin >>  nationalID_number;
 
     cout << "Select your currency: " << endl;
     cout << "\t1-Cedi \n\t2-USD \n\t3-Euro \n\t4-Yuan \n\t5-Rand \n\t6-Pound " << endl;
@@ -186,12 +174,8 @@ int main()
     cout << "Enter Amount: ";
     cin >>  amount;
 
-
-    cout << "\n=========USER INFORMATION=============" << endl;
+    cout << "\n=========SYSTEM OUTPUT=============" << endl;
     
-    cout << "Name: " << name << endl;
-    cout << "Phone number: " << phone << endl;
-    cout << "National Card Number: " << nationalID_number << endl;
     cout << "Amount: " << amount << endl;
     if(currency == 1){
         from_cedi(amount, exchange_format);
@@ -209,7 +193,7 @@ int main()
         cout << "todo";
     }
 
-    cout << "=========/USER INFORMATION=============" << endl;
+    cout << "=========/SYSTEM OUTPUT=============" << endl;
 
     return 0;
 }
