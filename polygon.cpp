@@ -40,9 +40,6 @@ int main()
     string polygons[11] = {"Triangle", "Quadrilateral", "Pentagon", "Hexagon", "Septagon", "Octagon", "Nonagon", "Decagon", "Undecagon", "Dodecagon", "Tridecagon"};
     
     cout << "WELCOME TO POLYGON PERIMETER OPERATOR: \n"<< endl;
-    // cout << "Select Operation to Perform: " << endl;
-    // cout << "\t1 - Perimeter \n\t2 - Area \n\t3 - Volume \n\t4 - Total Surface Area" << endl;
-    // cout << ">> (1 - 3): "; cin>> operation;
     
     cout << "Select Polygon: " << endl;
     cout << "\t0 - Triangle \n\t1 - Quadrilateral \n\t2 - Pentagon \n\t3 - Hexagon \n\t4 - Septagon \n\t5 - Octagon \n\t6 - Nonagon \n\t7 - Decagon \n\t8 - Undecagon \n\t9 - Dodecagon \n\t10 - Tridecagon" << endl;
@@ -51,6 +48,7 @@ int main()
     
     number_of_sides = detect_polygon(type);
     name = polygons[type];
+    
     // call qty functions
     perimeter = get_perimeter(number_of_sides, length);
     area = get_area(number_of_sides, length);
@@ -66,5 +64,7 @@ int main()
     cout << "Area: " << area << " square cm" << endl; 
     cout << "Exterior Angle: " << exterior_angle << " degrees" << endl; 
     cout << "Interior Angle: " << interior_angle << " degrees" << endl; 
+    
+    // TODO: IN-RADIUS AND CIRCUM-RADIUS
     return 0;
 }
